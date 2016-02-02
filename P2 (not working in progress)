@@ -1,0 +1,101 @@
+<?php
+define('THIS_PAGE', basename($_SEVER['PHP_SELF']))
+//food truck.php
+
+
+
+/*class Item{
+    public $name = ''; 
+    public $price = 0;
+    public $description='';
+    
+public function __construct($name,$description,$price){
+    
+    $this->name = $name;
+    $this->description = $description;   
+    $this->price = $price;
+        
+$items[] = new Item("Fried rice","mixed with other ingredients, such as eggs, vegetables, and meat!" ,8.99);
+$items[] = new Item("phat Thai","stir-fried rice noodle dish!" ,3.99);
+$items[] = new Item("pizza","topped with a selection of meats, vegetables and condiments. !" ,2.99);
+    
+    }
+}
+*/
+
+
+
+//check for input from the user
+if (array_key_exists('quantity',$_POST))
+
+{
+    
+   
+    
+    $item1Quantity= $_POST['input1'];
+    $item2Quantity= $_POST['input2'];
+    $item3Quantity= $_POST['input3'];
+    
+    
+    
+    echo"<table><tr><th>Subtotal: </th></tr>
+        <tr><th>$subTotal=($item1Quantity1*8.99) + ($item1Quantity2*3.99) + ($item1Quantity3*2.99)</th></tr>";
+    
+    
+    
+    
+}
+
+
+
+
+
+?>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>food trucker</title>
+    
+</head>
+<form action=" . THIS_PAGE . " method="post">
+    
+    <!--food item 1-->
+    
+    <label><input type="checkbox" name="FriedRice" value="Fried rice">Fried Rice</label><input type="text" name="input1" value=""> Quantity<br>  
+    
+    <!--food item 2-->
+    
+    <label><input type="checkbox" name="PhatThai" value="Phat Thai">Phat Thai</label><input type="text" name="input2" value=""> Quantity<br> 
+    
+      <!--food item 3-->
+    
+    
+     <label><input type="checkbox" name="Total" value="Pizza">Pizza</label><input type="text" name="input3" value=""> Quantity<br> 
+    
+    <!--submit button-->
+    
+    <input type="submit" name="submit" value="submit">
+    
+    
+    <!--food subtotal-->
+    
+        <table><input type="textbox" name="subtotal" value="subtotal">Subtotal</table>
+    <input type="text" name="subtotal" value="subtotal"><br> 
+    
+    <!--food tax-->
+    
+   <table><input type="textbox" name="tax" value="tax">Tax</table>
+    <input type="text" name="tax" value="tax"><br> 
+       
+    <!--food total-->
+    
+   <table><input type="textbox" name="total" value="total">Total</table>
+    <input type="text" name="total" value="total"><br> 
+    
+</form>   
+</html>
