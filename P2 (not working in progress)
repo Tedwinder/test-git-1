@@ -1,10 +1,11 @@
+
 <?php
-define('THIS_PAGE', basename($_SEVER['PHP_SELF']))
+//define('THIS_PAGE', basename($_SEVER['PHP_SELF']))
 //food truck.php
 
 
 
-/*class Item{
+class Item{
     public $name = ''; 
     public $price = 0;
     public $description='';
@@ -21,12 +22,22 @@ $items[] = new Item("pizza","topped with a selection of meats, vegetables and co
     
     }
 }
-*/
 
 
 
-//check for input from the user
-if (array_key_exists('quantity',$_POST))
+
+
+
+define('THIS_PAGE', basename($_SEVER['PHP_SELF']))
+
+    
+    
+    
+    
+    //check for input from the user
+    
+    
+if (array_key_exists('input1',$_POST))
 
 {
     
@@ -41,41 +52,35 @@ if (array_key_exists('quantity',$_POST))
     echo"<table><tr><th>Subtotal: </th></tr>
         <tr><th>$subTotal=($item1Quantity1*8.99) + ($item1Quantity2*3.99) + ($item1Quantity3*2.99)</th></tr>";
     
-    
-    
+        
     
 }
-
-
-
-
-
+    
 ?>
 
 
-
-
-
-<!DOCTYPE html>
 <html>
 <head>
     <title>food trucker</title>
     
 </head>
-<form action=" . THIS_PAGE . " method="post">
+<form action="THIS_PAGE" method="POST">
     
     <!--food item 1-->
     
-    <label><input type="checkbox" name="FriedRice" value="Fried rice">Fried Rice</label><input type="text" name="input1" value=""> Quantity<br>  
+    <label><input type="checkbox" name="FriedRice" value="Fried rice">Fried Rice</label>
+    <input type="text" name="input1" value=""> Quantity<br>  
     
     <!--food item 2-->
     
-    <label><input type="checkbox" name="PhatThai" value="Phat Thai">Phat Thai</label><input type="text" name="input2" value=""> Quantity<br> 
+    <label><input type="checkbox" name="PhatThai" value="Phat Thai">Phat Thai</label>
+    <input type="text" name="input2" value=""> Quantity<br> 
     
       <!--food item 3-->
     
     
-     <label><input type="checkbox" name="Total" value="Pizza">Pizza</label><input type="text" name="input3" value=""> Quantity<br> 
+     <label><input type="checkbox" name="Total" value="Pizza">Pizza</label>
+    <input type="text" name="input3" value=""> Quantity<br> 
     
     <!--submit button-->
     
@@ -99,3 +104,4 @@ if (array_key_exists('quantity',$_POST))
     
 </form>   
 </html>
+
